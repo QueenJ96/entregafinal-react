@@ -1,0 +1,64 @@
+.admin-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.form-group-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group-admin label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-texto);
+  margin-left: 4px;
+}
+
+.form-group-admin input,
+.form-group-admin select {
+  padding: 12px 16px;
+  border: 2px solid #EEE;
+  border-radius: 14px;
+  background-color: #FDFBF7;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group-admin input:focus,
+.form-group-admin select:focus {
+  border-color: var(--color-primario);
+}
+
+.admin-error-text {
+  color: #E74C3C;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.admin-submit-btn {
+  background-color: var(--color-primario);
+  color: var(--color-texto);
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(244, 194, 194, 0.4);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.admin-submit-btn:hover {
+  background-color: var(--color-secundario);
+  color: white;
+  transform: translateY(-2px);
+}

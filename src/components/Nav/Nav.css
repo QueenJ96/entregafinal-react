@@ -1,0 +1,15 @@
+.nav-secundaria {
+  background-color: var(--color-primario);
+  padding: 10px;
+  border-radius: 15px;
+}
+.nav-secundaria ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.nav-secundaria a {
+  color: white;
+  font-weight: bold;
+}

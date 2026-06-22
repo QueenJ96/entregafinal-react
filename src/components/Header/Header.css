@@ -1,0 +1,134 @@
+.site-header {
+  background-color: var(--color-blanco);
+  border-bottom: 2px solid rgba(244, 194, 194, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+/* Alineación de la marca con el logo */
+.header-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center; /* Centra verticalmente el logo con respecto al texto */
+  gap: 12px; /* Separación exacta entre el logo y las letras */
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.brand-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-secundario);
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #A0A0A0;
+  font-weight: 500;
+}
+
+.header-logo {
+  height: 45px; /* Un tamaño delicado y estilizado para el menú */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navegación */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-texto);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.nav-link:hover {
+  color: var(--color-secundario);
+  background-color: #FFF2F2;
+}
+
+.nav-link-cart {
+  background-color: var(--color-acento);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 10px rgba(212, 240, 240, 0.4);
+}
+
+.nav-link-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(212, 240, 240, 0.6);
+}
+
+.cart-badge {
+  background-color: var(--color-blanco);
+  color: var(--color-texto);
+  font-size: 12px;
+  padding: 2px 7px;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.nav-link-login {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-blanco);
+  background-color: var(--color-primario);
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+.nav-link-login:hover {
+  background-color: var(--color-secundario);
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 12px;
+  }
+  
+  .header-brand {
+    justify-content: center;
+  }
+
+  .header-nav {
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+}

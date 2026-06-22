@@ -1,0 +1,41 @@
+:root {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  /* Paleta Aesthetic / Pastel para Nacer con Estilo */
+  --color-fondo: #FDFBF7; /* Un cremita muy suave y cálido */
+  --color-texto: #4A4A4A; /* Gris oscuro para leer bien, más suave que el negro puro */
+  --color-primario: #F4C2C2; /* Rosa pastel bebé */
+  --color-secundario: #E0BBE4; /* Lila suave */
+  --color-acento: #D4F0F0; /* Verde menta/agua pastel */
+  --color-blanco: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+}

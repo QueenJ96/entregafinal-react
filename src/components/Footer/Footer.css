@@ -1,0 +1,52 @@
+.site-footer {
+  background-color: var(--color-blanco);
+  border-top: 1px solid rgba(244, 194, 194, 0.4); /* Línea rosa pastel arriba */
+  padding: 3rem 20px;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-title {
+  color: var(--color-secundario); /* Lila */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-text {
+  color: var(--color-texto);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.footer-links a {
+  color: var(--color-primario); /* Rosa */
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-acento); /* Menta */
+}
+
+.footer-copy {
+  color: #AAA;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}

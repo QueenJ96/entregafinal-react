@@ -1,0 +1,63 @@
+import "./App.css";
+import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import { Hero } from "./components/Hero/Hero";
+import { ImageBanner } from "./components/ImageBanner/ImageBanner";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Cart from "./components/Cart/Cart";
+import { SpotifyPlayer } from "./components/SpotifyPlayer/SpotifyPlayer";
+import { ProductSuccess } from "./components/adminComponents/ProductSuccess";
+import { Login } from "./components/Login/Login";
+import { Registro } from "./components/Registro/Registro";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import { Gestion } from "./components/Gestion/Gestion";
+import { seedProducts } from "./Firebase/seedProducts";
+
+function App() {
+  const location = useLocation();
+
+  return (
+    <>
+      <Header />
+      {/* BOTÓN DE AUTODESTRUCCIÓN (Borrar después de usar) */}
+    <button 
+      onClick={seedProducts} 
+      style={{ display: "block", margin: "10px auto", padding: "15px 30px", background: "#5C415D", color: "white", borderRadius: "15px", fontWeight: "bold", cursor: "pointer", zIndex: 99999, position: "relative" }}
+    >
+      🌱 PLANTAR CATÁLOGO EN FIREBASE (Hacer UN solo clic)
+    </button>
+      <main>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/admin" element={
+            <ProtectedRoute rolesPermitidos={['admin']}>
+              <Gestion />
+            </ProtectedRoute>
+          } />
+          <Route path="/success/:id" element={
+            <ProtectedRoute rolesPermitidos={['admin']}>
+              <ProductSuccess />
+            </ProtectedRoute>
+          } />
+          <Route path="/" element={
+            <>
+              <Hero />
+              <ImageBanner />
+              <ItemListContainer />
+            </>
+          } />
+          <Route path="/carrito" element={<Cart />} />
+          <Route path="/product/:id" element={<ItemDetailContainer />} />
+          <Route path="/productos" element={<ItemListContainer />} />
+        </Routes>
+      </main>
+      <Footer />
+      {location.pathname !== "/admin" && <SpotifyPlayer />}
+    </>
+  );
+}
+
+export default App;

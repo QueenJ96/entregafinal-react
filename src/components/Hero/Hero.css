@@ -1,0 +1,56 @@
+.hero {
+  background-color: transparent;
+  box-shadow: none;
+  max-width: 700px;
+  margin: 10px auto 30px auto; 
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 42px; 
+  color: #5C415D; /* Un lila/violeta oscuro profundo: ultra legible, fino y profesional */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.hero p {
+  font-size: 18px; 
+  color: #555555; /* Gris oscuro neutro para que contraste perfecto con el fondo */
+  margin-bottom: 25px;
+  max-width: 550px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 35px;
+  background-color: #F4C2C2; /* Rosa pastel sólido */
+  color: #4A4A4A; 
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(244, 194, 194, 0.4);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #D4F0F0; /* Menta suave al pasar el mouse */
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px 15px;
+  }
+  .hero h2 { font-size: 30px; }
+  .hero p { font-size: 16px; }
+}
