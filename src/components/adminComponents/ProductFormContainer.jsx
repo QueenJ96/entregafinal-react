@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ProductFormUI } from "./ProductFormUI";
 import { validateProduct } from "../../utils/validateProduct";
 import { createProduct } from "../../services/productsService";
+import { uploadImage } from "../../services/uploadImage";
 
 export const ProductFormContainer = () => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ export const ProductFormContainer = () => {
     img: "",
     description: ""
   });
+  const [imageFile, setImageFile] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -21,23 +23,45 @@ export const ProductFormContainer = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleImageChange = (e) => {
+    setImageFile(e.target.files[0]);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
-    if (!validateProduct(formData)) {
-      setError("Por favor, completá todos los campos obligatorios.");
+    // Validación inicial
+    if (!imageFile) {
+      setError("Por favor, seleccioná una imagen para el producto/servicio.");
       return;
     }
 
     try {
       setLoading(true);
-      // Manda los datos a Firebase
-      const idGenerado = await createProduct(formData);
+      
+      // 1. Subir imagen a ImgBB
+      const imageUrl = await uploadImage(imageFile);
+      
+      const productToSave = {
+        ...formData,
+        img: imageUrl
+      };
+
+      // 2. Validar que no falten datos
+      if (!validateProduct(productToSave)) {
+        setError("Por favor, completá todos los campos obligatorios.");
+        setLoading(false);
+        return;
+      }
+      
+      // 3. Mandar los datos a Firebase
+      const idGenerado = await createProduct(productToSave);
       navigate(`/success/${idGenerado}`);
+      
     } catch (err) {
       console.error(err);
-      setError("Error al guardar en la base de datos.");
+      setError("Error al subir la imagen o guardar en la base de datos.");
     } finally {
       setLoading(false);
     }
@@ -49,6 +73,7 @@ export const ProductFormContainer = () => {
     <ProductFormUI 
       formData={formData} 
       handleChange={handleChange} 
+      handleImageChange={handleImageChange} // <-- Faltaba agregar esta línea
       handleSubmit={handleSubmit} 
       error={error} 
     />

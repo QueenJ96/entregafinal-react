@@ -1,4 +1,4 @@
-export const ProductFormUI = ({ formData, handleChange, handleSubmit, error }) => {
+export const ProductFormUI = ({ formData, handleChange, handleSubmit, handleImageChange, error }) => {
   return (
     <form onSubmit={handleSubmit} className="admin-product-form">
       <div className="form-group-admin">
@@ -33,13 +33,12 @@ export const ProductFormUI = ({ formData, handleChange, handleSubmit, error }) =
       </div>
 
       <div className="form-group-admin">
-        <label>Ruta de la Imagen</label>
+        <label>Imagen del Servicio/Kit</label>
         <input
-          type="text"
+          type="file"
           name="img"
-          placeholder="Ej: /img/taller.jpg"
-          value={formData.img}
-          onChange={handleChange}
+          accept="image/*"
+          onChange={handleImageChange}
         />
       </div>
 
