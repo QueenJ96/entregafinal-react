@@ -20,14 +20,7 @@ function App() {
 
   return (
     <>
-      <Header />
-      {/* BOTÓN DE AUTODESTRUCCIÓN (Borrar después de usar) */}
-    <button 
-      onClick={seedProducts} 
-      style={{ display: "block", margin: "10px auto", padding: "15px 30px", background: "#5C415D", color: "white", borderRadius: "15px", fontWeight: "bold", cursor: "pointer", zIndex: 99999, position: "relative" }}
-    >
-      🌱 PLANTAR CATÁLOGO EN FIREBASE (Hacer UN solo clic)
-    </button>
+      <Header />     
       <main>
         <Routes>
           <Route path="/login" element={<Login />} />
