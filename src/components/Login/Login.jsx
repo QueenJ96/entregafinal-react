@@ -34,7 +34,7 @@ export const Login = () => {
     <div className="auth-wrapper">
       <form onSubmit={handleSubmit} className="auth-form">
         <h2>Bienvenida ✨</h2>
-        <p className="auth-subtitle">Ingresá para gestionar tus productos aesthetic</p>
+        <p className="auth-subtitle">Ingresá para gestionar tus productos y servicios</p>
         
         <div className="form-group">
           <label>Email</label>
