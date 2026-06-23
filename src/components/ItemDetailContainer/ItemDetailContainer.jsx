@@ -10,7 +10,7 @@ export const ItemDetailContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-    // Usamos nuestra función mock temporal en vez de Firebase por ahora
+    
     getProductById(id)
       .then((data) => {
         if (data) {
