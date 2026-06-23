@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
-import '../Login/Login.css'; // Usamos el mismo CSS para mantener la coherencia
+import '../Login/Login.css'; 
 
 export const Registro = () => {
   const [email, setEmail] = useState('');
