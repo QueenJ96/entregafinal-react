@@ -17,7 +17,7 @@ export const uploadImage = async (file) => {
       throw new Error("Error al subir la imagen");
     }
 
-    return data.data.url; // Retorna la URL pública para usar en tu app
+    return data.data.url; // Retorna la URL pública para usar en la app
   } catch (error) {
     console.error("ImgBB error:", error);
     throw error;
