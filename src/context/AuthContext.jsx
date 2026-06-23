@@ -14,13 +14,13 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Funciones simuladas temporalmente con la misma estructura que pide Firebase
+ 
   const signup = async (email, password) => {
     setUser({ email, rol: 'user', uid: '12345' });
   };
 
   const login = async (email, password) => {
-    // Truquito: si ponés "admin" en el mail, te da permisos de administradora
+    // Tiene que ser admin@loquesea !!
     const rolAsignado = email.includes('admin') ? 'admin' : 'user';
     setUser({ email, rol: rolAsignado, uid: '12345' });
   };
