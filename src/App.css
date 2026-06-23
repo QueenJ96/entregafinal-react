@@ -8,7 +8,7 @@ main {
 main h1 {
   font-size: 42px;
   margin-bottom: 16px;
-  color: var(--color-secundario); /* El título principal en lila suave */
+  color: var(--color-secundario); /* título principal en lila suave */
   letter-spacing: 2px;
 }
 
@@ -21,10 +21,10 @@ main p {
 .hero-wrapper {
   max-width: 1100px;
   margin: 2rem auto;
-  border-radius: 24px; /* Bordes bien redonditos */
+  border-radius: 24px; /* Bordes redondos */
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra súper sutil y elegante */
-  background-color: var(--color-primario); /* Fondo rosita para destacar la sección */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+  background-color: var(--color-primario); /* Fondo rosita */
 }
 
 a {
@@ -49,7 +49,7 @@ a:hover {
   margin: 2rem auto;
   border-radius: 24px;
   overflow: hidden;
-  background-color: transparent; /* Acá estaba el problema */
-  box-shadow: none; /* Sacamos la sombra para que quede limpio */
+  background-color: transparent; 
+  box-shadow: none; 
   }
 }

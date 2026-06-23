@@ -1,9 +1,9 @@
 :root {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
-  /* Paleta Aesthetic / Pastel para Nacer con Estilo */
-  --color-fondo: #FDFBF7; /* Un cremita muy suave y cálido */
-  --color-texto: #4A4A4A; /* Gris oscuro para leer bien, más suave que el negro puro */
+  /* Paleta */
+  --color-fondo: #FDFBF7; /* cremita */
+  --color-texto: #4A4A4A; /* Gris oscuro*/
   --color-primario: #F4C2C2; /* Rosa pastel bebé */
   --color-secundario: #E0BBE4; /* Lila suave */
   --color-acento: #D4F0F0; /* Verde menta/agua pastel */
