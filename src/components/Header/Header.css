@@ -24,8 +24,8 @@
 
 .header-brand {
   display: flex;
-  align-items: center; /* Centra verticalmente el logo con respecto al texto */
-  gap: 12px; /* Separación exacta entre el logo y las letras */
+  align-items: center; 
+  gap: 12px; 
 }
 
 .brand-text {
@@ -52,7 +52,7 @@
 }
 
 .header-logo {
-  height: 45px; /* Un tamaño delicado y estilizado para el menú */
+  height: 45px;
   width: auto;
   object-fit: contain;
 }
