@@ -73,7 +73,7 @@ export const ProductFormContainer = () => {
     <ProductFormUI 
       formData={formData} 
       handleChange={handleChange} 
-      handleImageChange={handleImageChange} // <-- Faltaba agregar esta línea
+      handleImageChange={handleImageChange} 
       handleSubmit={handleSubmit} 
       error={error} 
     />
